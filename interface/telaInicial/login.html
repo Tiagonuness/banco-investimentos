@@ -3,37 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NexoInvest</title>
+    <title>NexoInvest - Login</title>
     <link rel="stylesheet" href="style.css">
-
-
-
-
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
 </head>
+
+
 <body>
+    <div class="login-container">
+        <h3 class="login-title">Bem-vindo à NexoInvest</h3>
+        <form class="login-form">
+            
+            <div class="input-container">
+                <input type="text" placeholder="Usuário" id="login" required>
+            <i class='bx bxs-user-circle'></i>
+            </div>
+            
+            <div class="input-container">
+                <input type="text" maxlength="14" id="cpf" placeholder="CPF" required>
+                <i class='bx bxs-file'></i>
+            </div>
+    
+            
+            
+            <div class="input-container">
+                <input type="password" placeholder="Senha" id="senha" required>
+            <i class='bx bxs-lock' ></i>
+            </div>
+            
+            
+            <button type="submit" onclick="logar()">Entrar</button>
+            
+            <div>
 
-  
+            </div class="options-container">
+                <div class="forgot-password">
+                    <a href="#">Esqueceu sua senha?</a>
+            <div> 
+                
+                <div class="lembrar-senha">
+                    <input type="checkbox" id="lembrarsenha">
+                    <label for="lembrarsenha">Deseja guardar senha?</label>
+                </div>
+                
+            </div>
+            
+            <div class="criar-conta">
+                <p>Não tem uma conta?</p>
+                <a href="pagina-criacao-conta.html">Criar conta</a>
+            </div>
+            
+        </form>
+    </div>
 
-    <form>
-
-        <h3>Login</h3>
-        <input type="text" placeholder="Login" id="login">
-        <input type="password" placeholder="senha" id="senha">
-        <input type="submit" onclick="logar()"> 
-
-    </form>
    
+   
+   <script>
+        function logar(){
+            var login = document.getElementById("login").value;
+            var cpf = document.getElementById("cpf").value;
+            var senha = document.getElementById("senha").value;
+            alert(`Login: ${login}\nSenha: ${senha}\n CPF: ${cpf}`);
+
+            
+        }
+
+        
+        let campoCpf = document.querySelector("#cpf")
+
+        campoCpf.addEventListener("keypress", ()=>{
+        
+            let tamanhoCampo  = campoCpf.value.length
+            
+            if(tamanhoCampo ==3 || tamanhoCampo == 7){campoCpf.value += "."}
+            else if(tamanhoCampo == 11){campoCpf.value += "-"}
+
+        })
 
 
- 
+    </script>
+
+
 </body>
-<script>
-    function logar(){
-        var login = document.getElementById("login").value;
-        var senha = document.getElementById("senha").value;
-
-
-        alert(login);
-    }
-</script>
 </html>

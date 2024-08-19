@@ -1,24 +1,120 @@
-*{
-   box-sizing: border-box; 
+* {
+    box-sizing: border-box; 
+    margin: 0;
+    padding-top: 0;
 }
 
-body{
-    width: 100%;
-    height: 100%;
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000; /* Cor de fundo preta */
+    color: #fff; /* Texto branco */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-form{
-    width: 300px;
-    margin: 200px auto;
+.login-container {
+    background-color: #1a1a1a; /* Fundo ligeiramente mais claro que o body */
+    padding: 100px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
     text-align: center;
-
 }
 
-input{
-    display: block;
-    margin: 10px auto;
-    width: 250px;
-    height: 30px;
+.login-title {
+    color: #00ff00; /* Verde NexoInvest */
+    margin-bottom: 15px;
+}
 
+.input-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-container i {
+    position: absolute;
+    top: 50%;
+    left: 200px;
+    transform: translateY(-50%);
+    font-size: 15px;
+    color:#00ff00;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    display: block;
+    width: 100%;
+    padding: 20px 20px 20px 50px;
+    margin: 10px 0;
+    border-radius: 50px;
+    border: none;
+    background-color: #333; /* Fundo do input */
+    color: #f8f4f4; /* Texto branco */
+}
+
+.login-form button {
+    width: 100%;
+    padding: 20px;
+    border-radius: 50px;
+    border: none;
+    background-color: #00ff00; /* Verde NexoInvest */
+    color: #000; /* Texto preto */
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-form button:hover {
+    background-color: #00cc00; /* Verde escuro no hover */
+}
+
+.option-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.forgot-password {
+    margin: 0;
+}
+
+.option-container .forgot-password a {
+    color: #00ff00; /* Verde NexoInvest */
+    text-decoration: none;
+}
+
+.option-container .forgot-password a:hover {
+    text-decoration: underline;
+}
+
+.option-container .lembrar-senha {
+    display: flex;
+    align-items: center;
+}
+
+.option-container .lembrar-senha label {
+    color: #fff;
+    margin: 0;
+}
+
+.criar-conta {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.criar-conta p {
+    margin: 10px 0;
+}
+
+.criar-conta a {
+    color: #28a745;
+    text-decoration: none;
+}
+
+.criar-conta a:hover {
+    text-decoration: underline;
 }
 
