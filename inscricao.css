@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Montserrat", sans-serif;
+
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+}
+
+.content{
+    background-color: #484D50;
+    border-radius: 20px;
+    width: 960px;
+    height: 50%;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.content::before {
+    content: "";
+    position: absolute;
+    background-color: #00ff5f;
+    width: 50%;
+    height: 100%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+
+}
+
+.title {
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.title-second {
+    color: #00ff5f;
+}
+
+.description {
+    font-size: 17px;
+    font-weight: 400;
+    color: #fff;
+    line-height: 30px;
+}
+.description-primary {
+    color: black;
+}
+
+.btn {
+    border-radius: 30px;
+    text-transform: uppercase;
+    color: black;
+    font-size: 10px;
+    padding: 10px 50px;
+    cursor: pointer;
+    font-weight: bold;
+    align-self: center;
+    border: none;
+    margin-top: 1rem; 
+}
+
+.btn-primary {
+    background-color: #00ff5f;
+    border: 1px solid black;
+}
+
+.btn-primary:hover {
+    background-color: black;
+    color: #00ff5f;
+}
+
+.btn-second {
+    background-color: #00ff5f;
+    border: 1px solid black;
+    
+}
+
+.btn-second:hover {
+    background-color: black;
+    border: 1px solid black;
+    color: #00ff5f;
+}
+
+.first-column {
+    text-align: center;
+    flex: 1 0 auto;
+    z-index: 10;
+}
+
+.second-column {
+    flex: 2  0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.first-content {
+    display: flex;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+
+}
+
+.form input {
+    height: 50px;
+    width: 100%;
+    border: none;
+    background-color: #adadad;
+    
+}
+
+.label-input {
+    background-color: #adadad;
+    display: flex;
+    align-items: center;
+    margin: 8px;
+
+}
+
+.icon-modify {
+    color: #00ff5f;
+    padding: 0 5px;
+}
+
+.second-content {
+    position: absolute;
+    display: none;
+}
